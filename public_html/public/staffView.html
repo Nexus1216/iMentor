@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="iMentorApp" ng-csp>
+<head>
+   <script src="js/angular.js"></script>
+  <script src="js/ang/controllers.js"></script>
+  <script src ="js/angular-route.js"></script>
+  <script src="js/filters.js"></script>
+  
+  <title ng-bind-template="Listing What's In JSON File">JSON File Listing</title>
+</head>
+<body ng-controller="staffCtrl">
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <ul>
+        <li ng-repeat="member in members | staffFilter">
+          <p>{{member.id}}</p>
+              <span>{{member.name}}</span>
+              <p>{{member.title}}</p>
+              <p>{{member.underStaffMember}}</p>
+        </li>
+      </ul>
+
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

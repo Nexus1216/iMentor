@@ -1,0 +1,73 @@
+[
+    {
+    "id": "000000A",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Hey Anne, lol we have the same name, weirdddddd...",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 2,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    },
+        {
+    "id": "000000B",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Anne, the assignment thing this week is BORING",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 2,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    },
+    
+        {
+    "id": "000000C",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Anne, I found out my sister got into NYU! I think I want to go there too!",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 4,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    },
+    
+        {
+    "id": "000000D",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Meh",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 1,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    }
+    
+]
