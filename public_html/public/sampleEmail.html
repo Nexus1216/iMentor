@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="iMentorApp" ng-csp>
   <head>
-         <script src="js/angular.js"></script>
+            <script src="js/angular.js"></script>
   <script src="js/ang/controllers.js"></script>
   <script src ="js/angular-route.js"></script>
   <script src="js/filters.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>My Dashboard</title>
+    <title>Message</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <![endif]-->
     <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body ng-controller="mentorCtrl">
+  <body ng-controller = "mentorCtrl">
 <!-- Header -->
 <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
@@ -49,13 +49,13 @@
 <div class="row">
   <div class="col-sm-3">
       <!-- Left column -->
-      <a href="#"><strong> Tools</strong></a>
+      <a href="#"><strong>Tools</strong></a>
       
       <hr>
       
       <ul class="list-unstyled">
-        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">
-          <h5>Home </h5>
+        <li class="nav-header"> <a href="/index.html" data-toggle="collapse" data-target="#userMenu">
+          <h5>Home</h5>
           </a>
             <ul class="list-unstyled collapse in" id="userMenu">
                 <li class="active"> <a href="mentor.html"> Mentors/Mentees</a></li>
@@ -80,108 +80,45 @@
                 </li>
             </ul>
         </li>
-      </ul>          
+       
+      </ul>
+           
     </div><!-- /col-3 -->
     <div class="col-sm-9">
         
       <!-- column 2 -->
-      <a href="#"><strong>My Dashboard</strong></a>
+      <a href="mentor.html"><strong>Mentor - Mentee </strong></a>:
+      <a href="curriculum.html"><strong> Curriculum </strong></a>:
+      <a href="#"><strong> Message</strong></a>
       
         <hr>
       
     <div class="row">
            
-            
-          
-            <!-- center left--> 
           <div class="col-md-6">
-              <div class="well"><a href = "/message.html">Inbox Messages</a><span class="badge pull-right">4</span></div>
-          <div class="panel panel-default">
-                  <div class="panel-heading"><h4>Score<span style="float:right; font-size: 30px;"><strong>2.95 / 5</strong></span></h4></div>
-                  
-                  <div class="panel-body">
-                    
-                    <small>Overall</small>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 59%">
-                        <span class="sr-only" id = 'overallGrades'></span>
-                      </div>
-                    </div>
-                    <small>Freshman</small>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 27%">
-                        <span class="sr-only"></span>
-                      </div>
-                    </div>
-                    <small>Sophomore</small>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 56%">
-                        <span class="sr-only"></span>
-                      </div>
-                    </div>
-                    <small>Junior</small>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
-                        <span class="sr-only"></span>
-                      </div>
-                    </div>
-
-                    <small>Senior</small>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-dange" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                        <span class="sr-only"></span>
-                      </div>
-                    </div>
-                  </div><!--/panel-body-->
-              </div><!--/panel-->
-
-
+              
               <div class="panel panel-default">
-                  <div class="panel-heading"><h4>Recent Discussion</h4></div>
+                  <div class="panel-heading"><h4>Message</h4></div>
+
                   <div class="panel-body">
+                   
                     <div class="list-group">
-                        <li class="list-group-item"><a href="/sampleEmail.html"><small>(3 days ago)</small> Hey its joe again my high for the week is having no school for 4 day...</a></li>
-                        <li class="list-group-item"><a href="#"><small>(1 days ago)</small> Hi bill,Thanks for your email, it made my day after a very rough day...</a></li>
-                        <li class="list-group-item"><a href="#"><small>(2 days ago)</small> PK-- so you got to drive over break? that's pretty cool, my father did...</a></li>
-                        <li class="list-group-item"><a href="#"><small>(4 days ago)</small> Hi joe,It was great to see you on Friday! I hope you had a ...</a></li>
-                        <li class="list-group-item"><a href="#"><small>(a week ago)</small> Dear bill, Hi bill my break was great, I spent my week with my...</a></li>
-                        <li class="list-group-item"><a href="#"><small>(a week ago)</small> ..</a></li>
+                    
+                      <div class ="list-group-item">
+                    <p><strong>Receiver</strong>: Anne Hathaway</p> 
+                    <p><strong>Sender</strong>: Joe Schmoe</p>
+                    <p><strong>Email</strong>: Hey its joe again my high for the week is having no school for 4 day...</p>
+                    <p><strong>Body</strong>: Joe writes a super long email in here, that is hopefully on topic!</p>
+                    <p style = "color: green;"><strong>Score Overall: 3</strong></p>
+                    <br />
+                </div>
+                    
                     </div>
                   </div>
               </div>
-   
-            </div><!--/col-->
-          <div class="col-md-6">
-        <div class="panel panel-default">
-                  <div class="panel-heading"><h4><strong>Attention Required </strong></h4></div>
-                  <div class="panel-body">
-                    
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    Please be advised listed mentor/mentee relationships are not on track.
-                  </div>
-                <div style = "padding: 5px;" class = "list-group-item-danger" ng-repeat="member in members | badScoreFilter">
-                    <p><strong><a href="/sampleProfile.html">{{member.name}}</a></strong> -- {{member.title}}</p>
-                    <p>{{member.school}}</p>
-                    <p style = "color: red;">{{member.averageScore}}</p>
-                    <br />
-                </div>
-                  </div>
-                </div>
-              
-                <table class="table table-striped">
-                      <thead>
-                        <tr><th>Grade</th><th>Emails Exchanged</th><th>Relevance</th></tr>
-                      </thead>
-                      <tbody>
-                          <tr><td>Freshman</td><td>238</td><td style = "color:red;">1.35 / <b>5</b></td></tr>
-                        <tr><td>Sophomore</td><td>234</td><td  style = "color:red;">2.8 / <b>5</b></td></tr>
-                        <tr><td>Junior</td><td>223</td><td  style = "color:green;">3.65 / <b>5</b></td></tr>
-                        <tr><td>Senior</td><td>324</td><td  style = "color:green;">4 / <b>5</b></td></tr>
-                      </tbody>
-                </table>
-              
-                <div class="panel panel-default">
+    
+    
+          <div class="panel panel-default">
                   <div class="panel-heading">
                         <div class="panel-title">
                         <h4>Quick Message</h4>
@@ -208,7 +145,7 @@
                         <div class="control-group">
                           <label>Reason</label>
                           <div class="controls">
-                             <select class="form-control"><option>options</option></select>
+                             <select class="form-control"><option>options</option><option>Improvements</option><option>Questions</option></select>
                           </div>
                         </div>    
                         
@@ -222,13 +159,41 @@
                         </div>   
                         
                       </form>
-                
-                
+                  </div>
+          </div>
+ 
+   
+            </div><!--/col-->
+          <div class="col-md-6">
+        <div class="panel panel-default">
+                  <div class="panel-heading"><h4>Curriculum </h4></div>
+                  <div class="panel-body">
+                    What is a Growth Mindset? <br /><br />
+                    Think about Tiger Woods and Michael Jordan. These two athletes are legends in their 
+                    sports. <br /><br />
+                    How many times have you heard people say, “they were born to play golf /basketball?” 
+                    Do you believe when it comes to achieving success you were either born with the ability 
+                    and skills to make it or not? <br /><br />
+                    There are two ways of looking at this: with a fixed mindset or a growth mindset. A fixed 
+                    mindset is a belief that your intelligence is innate/you were born with it. A growth 
+                    mindset, on the other hand, is a belief that success is a combination of the aptitude 
+                    you’re born with AND the amount of effort and hard work you put in. 
+                    We don't know if Michael or Tiger were "born champions" but here's what we do know: 
+                    Tiger started playing golf at age 2 and has practiced for hours every day since then to 
+                    achieve the success he has today. Michael Jordan similarly practiced 3-4 hours every 
+                    day to build on some of the innate skills he may have been born with. Without all of 
+                    this practice and hard work, would these two champions have achieved the success 
+                    they have today? <br /></br>
+                    Malcolm Gladwell, an author and sociologist, wrote a book called Outliers. In it, he 
+                    says, "The closer psychologists look at the careers of the gifted, the smaller the role 
+                    innate talent seems to play and the bigger the role preparation seems to play." He 
+                    found that the most talented students, musicians and athletes had gradually increased 
+                    their practice while growing up until they had logged over 10,000 hours by the age of 
+                    20. The magic number seems to be 10,000 hours. That's the equivalent of about 20 
+                    hours of practice every week for 10 years. 
                   </div><!--/panel content-->
                 </div><!--/panel-->
-              
 
-              
       </div><!--/col-span-6-->
      
       </div><!--/row-->

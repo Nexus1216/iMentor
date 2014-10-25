@@ -3,7 +3,7 @@
     "id": "00001",
     "name": "Lenore DeSable",
     "title": "mentor",
-    "school": "BlahBlah Academy",
+    "school": "Ohtori Academy",
     "underStaffMember": "Anne Hathaway",
     "student": "Little Orphan Annie",
     "averageScore": 4
@@ -12,24 +12,24 @@
     "id": "00002",
     "name": "Little Orphan Annie",
     "title": "mentee",
-    "school": "Not",
+    "school": "The New School",
     "underStaffMember": "Anne Hathaway",
     "mentor":"Lenore DeSable",
     "grade": 9,
-    "averageScore": 2
+    "averageScore": 2.25
 },
 {
     "id": "00003",
     "name": "Anne Hathaway",
     "title": "staff",
-    "school": "BlahBlah Academy",
+    "school": "Ohtori Academy",
     "averageScore": 3
 },
 {
     "id": "00004",
     "name": "Bossella Grande",
     "title": "manager",
-    "school": "BlahBlah Academy",
+    "school": "Ohtori Academy",
     "averageScore": 1
 }
 ]
