@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="iMentorApp" ng-csp>
+<html lang="en">
   <head>
-            <script src="js/angular.js"></script>
-  <script src="js/ang/controllers.js"></script>
-  <script src ="js/angular-route.js"></script>
-  <script src="js/filters.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#submitButton").click(function(){
+          $.post("",function(data,status){
+            {"message_text":"test"},
+                  function(data, textStatus, jqXHR)
+          {
+                 alert(data);
+    });
+            <!--alert("Data: " + data + "\nStatus: " + status);-->
+          });
+        });
+      });
+      </script>
+
+<!--<script>
+      $(document).ready(function(){
+        $("Button").click(function(){
+          $.post("",function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+          });
+        });
+      });
+      </script>-->
+
+<!--<script>
+$(document).ready(function(){
+    $("#submitButton").click(function(){
+      $.post("http://ec2-54-84-241-50.compute-1.amazonaws.com:8001/imentor/score_message/",
+        {"message_text":"test"},
+    function(data, textStatus, jqXHR)
+    {
+          alert(data);
+    });
+     
+    });
+  });
+
+
+</script>-->
+
+
+
+      </head>
+    <!-- script references -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Message</title>
@@ -16,7 +61,7 @@
     <![endif]-->
     <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body ng-controller = "mentorCtrl">
+  <body>
 <!-- Header -->
 <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
@@ -61,6 +106,8 @@
                 <li class="active"> <a href="mentor.html"> Mentors/Mentees</a></li>
                 <li><a href="message.html"> Messages <span class="badge badge-info">4</span></a></li>
                 <li><a href="curriculum.html"> Curriculum</a></li>
+                <li><a href="#"> Options</a></li>
+                <li><a href="#"> Settings</a></li>
             </ul>
         </li>
         <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2">
@@ -80,9 +127,9 @@
                 </li>
             </ul>
         </li>
-       
+        
       </ul>
-           
+      
     </div><!-- /col-3 -->
     <div class="col-sm-9">
         
@@ -96,25 +143,9 @@
     <div class="row">
            
           <div class="col-md-6">
-              
-              <div class="panel panel-default">
-                  <div class="panel-heading"><h4>Message</h4></div>
 
-                  <div class="panel-body">
-                   
-                    <div class="list-group">
-                    
-                      <div class ="list-group-item" ng-repeat="email in emails">
-                    <p><strong>Receiver</strong>: {{email.to}}</p> 
-                    <p><strong>Sender</strong>: {{email.from}}</p>
-                    <p><strong>Email</strong>: {{email.headline}}</p>
-                    <p style = "color: green;"><strong>Score Overall: {{email.score.exactScore}}</strong></p>
-                    <br />
-                </div>
-                    
-                    </div>
-                  </div>
-              </div>
+              
+              
     
     
           <div class="panel panel-default">
@@ -125,19 +156,23 @@
                   </div>
                   <div class="panel-body">
 
-                      <form class="form form-vertical">
-                       
+                  
+                      <form class="form form-vertical" action= "http://ec2-54-84-241-50.compute-1.amazonaws.com:8001/imentor/score_message/" method="POST">
+
+                        <div align="left">
+
                         <div class="control-group">
                           <label>Name</label>
                           <div class="controls">
                            <input type="text" class="form-control" placeholder="Enter Name">
                           </div>
                         </div>      
-                        
+                         
+
                         <div class="control-group">
                           <label>Message</label>
                           <div class="controls">
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" name="message_text"></textarea>
                           </div>
                         </div> 
                              
@@ -148,15 +183,18 @@
                           </div>
                         </div>    
                         
+
+
                         <div class="control-group">
                             <label></label>
                           <div class="controls">
-                          <button type="submit" class="btn btn-primary">
-                              Send
-                            </button>
+                          <button id="submitButton" class="btn btn-primary">Send</button>
+                       
+
+
                           </div>
                         </div>   
-                        
+                        </div>
                       </form>
                   </div>
           </div>
@@ -167,6 +205,7 @@
         <div class="panel panel-default">
                   <div class="panel-heading"><h4>Curriculum </h4></div>
                   <div class="panel-body">
+                 
                     What is a Growth Mindset? <br /><br />
                     Think about Tiger Woods and Michael Jordan. These two athletes are legends in their 
                     sports. <br /><br />
@@ -190,6 +229,9 @@
                     their practice while growing up until they had logged over 10,000 hours by the age of 
                     20. The magic number seems to be 10,000 hours. That's the equivalent of about 20 
                     hours of practice every week for 10 years. 
+
+
+
                   </div><!--/panel content-->
                 </div><!--/panel-->
 
@@ -225,10 +267,7 @@
 
 
 
+
   
-  <!-- script references -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
   </body>
 </html>
