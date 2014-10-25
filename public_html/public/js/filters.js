@@ -15,7 +15,7 @@ iMentorApp.filter('schoolFilter', function () {
     for (var i = 0; i < members.length; i++) {
       var member = members[i];
       // check if the individual Array element begins with `a` or not
-      if (member.school === "BlahBlah Academy" && member.title !== "manager") {
+      if (member.school === "Ohtori Academy" && member.title !== "manager") {
         // push it into the Array if it does!
         filtered.push(member);
       }
