@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="iMentorApp" ng-csp>
+  <head>
+      <script src="js/angular.js"></script>
+  <script src="js/ang/controllers.js"></script>
+  <script src ="js/angular-route.js"></script>
+  <script src="js/filters.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Curriculum</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body ng-controller="mentorCtrl">
+<!-- Header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">myMentor Dashboard</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">Case Manager<span class="caret"></span></a>
+          <ul id="g-account-menu" class="dropdown-menu" role="menu">
+            <li><a href="#">My Profile</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div><!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-3">
+      <!-- Left column -->
+      <a href="#"><strong> Tools</strong></a>
+      
+      <hr>
+      
+      <ul class="list-unstyled">
+        <li class="nav-header"> <a href="index.html" data-toggle="collapse" data-target="#userMenu">
+          <h5>Home </h5>
+          </a>
+            <ul class="list-unstyled collapse in" id="userMenu">
+                <li class="active"> <a href="mentor.html"> Mentors/Mentees</a></li>
+                <li><a href="message.html"> Messages <span class="badge badge-info">4</span></a></li>
+                <li><a href="curriculum.html"> Curriculum</a></li>
+                <li><a href="#"> Options</a></li>
+                <li><a href="#"> Settings</a></li>
+            </ul>
+        </li>
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2">
+          <h5>Reports </h5>
+          </a>
+        
+            <ul class="list-unstyled collapse" id="menu2">
+                <li><a href="#">Information &amp; Stats</a>
+                </li>
+                <li><a href="#">Views</a>
+                </li>
+                <li><a href="#">Requests</a>
+                </li>
+                <li><a href="#">Timetable</a>
+                </li>
+                <li><a href="#">Alerts</a>
+                </li>
+            </ul>
+        </li>
+       
+      </ul>
+           
+      <hr>
+      
+      <a href="#"><strong> Resources</strong></a>
+      
+      <hr>
+      
+    </div><!-- /col-3 -->
+    <div class="col-sm-9">
+        
+      <!-- column 2 -->
+      <a href="#"><strong> Curriculum </strong></a>
+      
+        <hr>
+      
+    <div class="row">
+           
+          <div class="col-md-6">
+              
+              <div class="panel panel-default">
+                  <div class="panel-heading"><h4>Curriculum</h4></div>
+
+                  <div class="panel-body">
+                   
+                    <div class="list-group">
+                    
+                      <a href="#" class="list-group-item">This Week</a>
+                      <a href="#" class="list-group-item">Week 5</a>
+                      <a href="#" class="list-group-item">Week 4</a>
+                      <a href="#" class="list-group-item">Week 3</a>
+                      <a href="#" class="list-group-item">Week 2</a>
+                      <a href="#" class="list-group-item">Week 1</a>
+                    
+                    </div>
+                  </div>
+              </div>
+   
+   
+            </div><!--/col-->
+          <div class="col-md-6">
+        <div class="panel panel-default">
+                  <div class="panel-heading"><h4><strong>Attention Required </strong></h4></div>
+                  <div class="panel-body">
+                    
+                  <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    Please be advised listed mentor/mentee relationships are not on track.
+                  </div>
+                      <div  ng-repeat="member in members | badScoreFilter"> 
+                      <div style = "padding-left: 5px;" class = "list-group-item-danger">
+                        <p><strong>{{member.name}} -- {{member.title}}</strong></p>
+                        <p>{{member.school}}</p>
+                        <p>{{member.averageScore}}</p>
+                    </div>
+                      </div>
+
+                    <br />
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <div class="panel-title">
+                        <h4>Quick Message</h4>
+                        </div>
+                  </div>
+                  <div class="panel-body">
+
+                      <form class="form form-vertical">
+                       
+                        <div class="control-group">
+                          <label>Name</label>
+                          <div class="controls">
+                           <input type="text" class="form-control" placeholder="Enter Name">
+                          </div>
+                        </div>      
+                        
+                        <div class="control-group">
+                          <label>Message</label>
+                          <div class="controls">
+                            <textarea class="form-control"></textarea>
+                          </div>
+                        </div> 
+                             
+                        <div class="control-group">
+                          <label>Reason</label>
+                          <div class="controls">
+                             <select class="form-control"><option>options</option></select>
+                          </div>
+                        </div>    
+                        
+                        <div class="control-group">
+                            <label></label>
+                          <div class="controls">
+                          <button type="submit" class="btn btn-primary">
+                              Send
+                            </button>
+                          </div>
+                        </div>   
+                        
+                      </form>
+                
+                
+                  </div><!--/panel content-->
+                </div><!--/panel-->
+              
+
+              
+      </div><!--/col-span-6-->
+     
+      </div><!--/row-->
+      
+
+    </div><!--/col-span-9-->
+</div>
+</div>
+<!-- /Main -->
+<!--
+<footer class="text-center">This Bootstrap 3 dashboard layout is compliments of <a href="http://www.bootply.com/85850"><strong>Bootply.com</strong></a></footer>
+-->
+<div class="modal" id="addWidgetModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Add Widget</h4>
+      </div>
+      <div class="modal-body">
+        <p>Add a widget stuff here..</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dalog -->
+</div><!-- /.modal -->
+
+
+
+  
+  <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

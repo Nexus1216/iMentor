@@ -1,0 +1,73 @@
+[
+    {
+    "id": "000000A",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Hey its joe again my high for the week is having no school for 4 day... ",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 5,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    },
+        {
+    "id": "000000B",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Hi bill,Thanks for your email, it made my day after a very rough day... ",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 2,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    },
+    
+        {
+    "id": "000000C",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "PK-- so you got to drive over break? that's pretty cool, my father did... ",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 4,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    },
+    
+        {
+    "id": "000000D",
+    "from": "Anne Hathaway",
+    "to": "Little Orphan Annie",
+    "headline": "Hi joe,It was great to see you on Friday! I hope you had a ... ",
+    "body": " ",
+    "topic": {
+        "detail": "Here are some details",
+        "keyWords": "blahblah",
+        "dateAssigned": "September 20, 1572"
+    },
+    "score": {
+        "exactScore": 3,
+        "keyWords": {"word": "Key", "timesUsed": 5},
+        "wordCount": 20
+    }
+    }
+    
+]
