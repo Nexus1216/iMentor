@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#submitButton").click(function(){
+          $.post("",function(data,status){
+            {"message_text":"test"},
+                  function(data, textStatus, jqXHR)
+          {
+                 alert(data);
+    });
+            <!--alert("Data: " + data + "\nStatus: " + status);-->
+          });
+        });
+      });
+      </script>
 
 <!--<script>
       $(document).ready(function(){
@@ -113,8 +127,23 @@ $(document).ready(function(){
                 </li>
             </ul>
         </li>
+        <li class="nav-header">
+        <a href="#" data-toggle="collapse" data-target="#menu3">
+          <h5>Social Media </h5>
+          </a>
         
+            <ul class="list-unstyled collapse" id="menu3">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </li>
       </ul>
+           
+      <hr>
+      
+      <a href="#"><strong> Resources</strong></a>
+      
+      <hr>
       
     </div><!-- /col-3 -->
     <div class="col-sm-9">
@@ -130,8 +159,6 @@ $(document).ready(function(){
            
           <div class="col-md-6">
 
-              
-              
     
     
           <div class="panel panel-default">
@@ -250,5 +277,10 @@ $(document).ready(function(){
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dalog -->
 </div><!-- /.modal -->
+
+
+
+
+  
   </body>
 </html>
